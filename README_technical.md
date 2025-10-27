@@ -35,3 +35,7 @@ ODA values adjusted to constant USD (OECD DAC2A).
 Lag variables (1–3 years) used to assess delayed effects on literacy and life expectancy.
 
 Figures exported to reports/figures/.
+
+## Reproducibility note
+All datasets are publicly available and can be downloaded via the URLs listed in the main README.  
+This repository provides complete reproducibility for all visualizations and regression outputs using R scripts and Quarto reports.
