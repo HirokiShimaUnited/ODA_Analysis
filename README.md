@@ -11,13 +11,23 @@ This project investigates Official Development Assistance (ODA) and key human de
 The purpose is to assess how education and health sector aid interact to shape literacy, life expectancy, and infant mortality outcomes.
 
 ### Data Sources
-1. **OECD DAC2A – Creditor Reporting System (CRS):**  
-   Aggregate ODA disbursements by donor and recipient in constant USD.  
-2. **World Bank WDI – World Development Indicators:**  
-   Literacy, Life Expectancy, Infant Mortality, and School Enrollment.  
-3. **World Bank Population Data:**  
-   Used to compute ODA per capita and demographic growth factors.
+- **OECD DAC2A – Creditor Reporting System (CRS):**  
+  Aggregate ODA disbursements by donor and recipient in constant USD.  
+  Data extracted from the OECD Data Explorer:  
+  🔗 [https://data-explorer.oecd.org/](https://data-explorer.oecd.org/)  
+  *(Dataset: “Aid (ODA) disbursements to countries and regions (DAC2A)”)*
+  
+- **World Bank – World Development Indicators (WDI):**  
+  Literacy rate, life expectancy, infant mortality, and school enrollment.  
+  Data obtained from the World Bank DataBank:  
+  🔗 [https://databank.worldbank.org/source/world-development-indicators](https://databank.worldbank.org/source/world-development-indicators)
 
+- **World Bank – Population and Income Data:**  
+  Country-level population size and income group classification (Low, Lower-middle, Upper-middle, High income).  
+  Data available from:  
+  🔗 [https://data.worldbank.org/indicator/SP.POP.TOTL](https://data.worldbank.org/indicator/SP.POP.TOTL)
+
+---
 ### Data Processing
 - Data merged and cleaned in **Power Query** and **R**.  
 - Indicators normalized by year and income group.  
