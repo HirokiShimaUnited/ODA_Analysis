@@ -72,3 +72,7 @@ Independent Researcher | Human Capital & Development Analytics
 ## Citation
 If you use this repository or data for academic or policy work, please cite as:  
 Hiroki Shima (2025). *ODA_Analysis: Independent evaluation of Official Development Assistance effectiveness (2000–2023).* GitHub repository: [https://github.com/HirokiShimaUnited/ODA_Analysis](https://github.com/HirokiShimaUnited/ODA_Analysis)
+
+---
+For full technical reproducibility (R scripts, data processing, and report rendering),
+see [README_technical.md](README_technical.md).
