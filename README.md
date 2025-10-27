@@ -50,9 +50,8 @@ The purpose is to assess how education and health sector aid interact to shape l
 
 ## Files Included
 - `data/` – Cleaned dataset used in the analysis  
-- `scripts/` – R scripts for data processing and visualization  
-- `report.Rmd` – RMarkdown source file  
-- `report.pdf` – Final report (knitted output)
+- `PowerBi/` – PowerBi Dashborad for data processing and visualization   
+- `ODA.pdf` – Final report (knitted output)
 
 ---
 
