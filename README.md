@@ -50,8 +50,8 @@ The purpose is to assess how education and health sector aid interact to shape l
 
 ## Files Included
 - `data/` – Cleaned dataset used in the analysis  
-- `ODA_Analysis.p/` – PowerBi Dashborad for data processing and visualization   
-- `ODA.pdf` – Final report (knitted output)
+- `ODA_Analysis.pbix/` – PowerBi Dashborad for data processing and visualization   
+- `ODA_Analysis.pdf` – Final report (knitted output)
 
 ---
 
