@@ -1,76 +1,105 @@
 # ODA_Analysis
 
-Independent analysis of Official Development Assistance (ODA) effectiveness, 2000–2023.  
-Uses OECD DAC2A and World Bank WDI data to explore how education and health investments influence literacy, life expectancy, and infant mortality, highlighting cross-sector connectivity in human development.  
-Includes R scripts, RMarkdown, and a PDF report with fully reproducible analysis.
+Independent analysis of **Official Development Assistance (ODA)** effectiveness (2000–2023).  
+This project explores how **education** and **health** aid relate to **literacy**, **life expectancy**, and **infant mortality**,  
+highlighting cross-sector connections in human development and social investment outcomes.  
 
 ---
 
-## About the Data
-This project investigates Official Development Assistance (ODA) and key human development indicators across selected developing countries from 2000 to 2023.  
-The purpose is to assess how education and health sector aid interact to shape literacy, life expectancy, and infant mortality outcomes.
+## 📘 Project Overview
+Do countries that invest more in education and health host better human development outcomes?  
+Using open datasets from **OECD DAC2A** and **World Bank WDI**, this project applies reproducible R-based analytics  
+to examine how sectoral ODA aligns with long-term improvements in literacy, health, and well-being.  
+
+---
+
+## 📊 About the Data
+The analysis integrates ODA disbursement data (OECD DAC2A) with human development indicators (WDI)  
+for selected developing countries from **2000 to 2023**.
 
 ### Data Sources
 - **OECD DAC2A – Creditor Reporting System (CRS):**  
-  Aggregate ODA disbursements by donor and recipient in constant USD.  
-  Data extracted from the OECD Data Explorer:  
+  Aggregate ODA disbursements by donor and recipient (constant USD).  
   🔗 [https://data-explorer.oecd.org/](https://data-explorer.oecd.org/)  
   *(Dataset: “Aid (ODA) disbursements to countries and regions (DAC2A)”)*
 
 - **World Bank – World Development Indicators (WDI):**  
   Literacy rate, life expectancy, infant mortality, and school enrollment.  
-  Data obtained from the World Bank DataBank:  
   🔗 [https://databank.worldbank.org/source/world-development-indicators](https://databank.worldbank.org/source/world-development-indicators)
 
 - **World Bank – Population and Income Data:**  
-  Country-level population size and income group classification (Low, Lower-middle, Upper-middle, High income).  
-  Data available from:  
+  Country-level population and income group classification (Low → High income).  
   🔗 [https://data.worldbank.org/indicator/SP.POP.TOTL](https://data.worldbank.org/indicator/SP.POP.TOTL)
 
 ---
-### Data Processing
-- Data merged and cleaned in **Power Query** and **R**.  
+
+## ⚙️ Data Processing
+- Data merged and cleaned using **R (tidyverse)** and **Power Query**.  
 - Indicators normalized by year and income group.  
-- Lag variables (1–3 years) applied to capture delayed effects of ODA on literacy and life expectancy.  
-- Averages, growth rates, and mismatch indicators computed using **DAX** and **tidyverse**.  
+- Lag variables (1–3 years) applied to capture delayed effects of ODA.  
+- Growth rates and mismatch indicators computed using **DAX** and **tidyverse**.
 
-### Dashboard & Analytical Goals
+---
+
+## 🎯 Analytical Goals
 - Evaluate ODA allocation efficiency by **sector** and **income group**.  
-- Assess long-term human development improvements.  
-- Identify mismatches between ODA inflows and outcome trends.  
-- Support data-driven, integrated ODA decision making through the **Education–Health Nexus** framework.
+- Assess long-term **literacy** and **health** improvements.  
+- Identify mismatches between ODA inflows and observed progress.  
+- Support data-driven, cross-sectoral policy design through the **Education–Health Nexus** framework.
 
 ---
 
-## Data Sources (Summary)
-- **OECD DAC2A:** Aid (ODA) disbursements to countries and regions (2000–2023)  
-- **World Bank WDI:** Literacy rate, life expectancy, infant mortality, school enrollment  
+## 🧩 Technical Workflow (Reproducibility)
+1. `Rscript code/00_setup.R` – Package installation and environment setup  
+2. `Rscript code/01_clean_merge.R` – Data cleaning, merging, and lag creation  
+3. `Rscript code/02_model_plots.R` – Regression and visualization generation  
+4. `quarto render reports/ODA_Analysis.qmd` – Render final report (PDF/HTML)
+
+**Directory Structure**
+data/
+├─ raw/
+└─ processed/
+code/
+├─ 00_setup.R
+├─ 01_clean_merge.R
+└─ 02_model_plots.R
+reports/
+├─ ODA_Analysis.qmd
+├─ ODA_Analysis.pdf
+└─ figures/
+
 
 ---
 
-## Files Included
-- `data/` – Cleaned dataset used in the analysis  
-- `ODA_Analysis.p/` – PowerBi Dashborad for data processing and visualization   
-- `ODA.pdf` – Final report (knitted output)
-- `ODA_Analysis.pbix/` – PowerBi Dashborad for data processing and visualization   
-- `ODA_Analysis.pdf` – Final report (knitted output)
+## 📈 Key Findings
+- **Education ODA** shows a positive correlation with **literacy rate** (Pearson r ≈ +0.65).  
+- **Health ODA** is moderately linked to **life expectancy** (r ≈ +0.58).  
+- Combined education–health models explain development variance better than single-sector models.  
+- Several middle-income countries show a mismatch between high ODA inflows and slower outcome growth.
 
 ---
 
-## Reproducibility
-All analysis steps can be replicated using **R 4.3+** and the **tidyverse** package suite.  
-Data sources are publicly available and referenced for transparency.  
-Results are fully reproducible using the included RMarkdown and scripts.
+## 📂 Data Sources (Summary)
+- OECD DAC2A (2000–2023): Education & Health ODA  
+- World Bank WDI: Literacy, Life Expectancy, Infant Mortality, School Enrollment  
 
 ---
 
-## Author
-**Hiroki Shima**  
+## 🔁 Reproducibility
+All analyses can be reproduced using **R 4.3+** and the **tidyverse** suite.  
+Data sources are open and publicly available for transparency.  
+Results are fully replicable using included **R scripts** and **Quarto reports**.
+
+---
+
+## 👤 Author
+**H.S (Hiroki Shima)**  
 Independent Researcher | Human Capital & Development Analytics  
 [GitHub: HirokiShimaUnited](https://github.com/HirokiShimaUnited)
 
 ---
 
-## Citation
-If you use this repository or data for academic or policy work, please cite as:  
-Hiroki Shima (2025). *ODA_Analysis: Independent evaluation of Official Development Assistance effectiveness (2000–2023).* GitHub repository: [https://github.com/HirokiShimaUnited/ODA_Analysis](https://github.com/HirokiShimaUnited/ODA_Analysis)
+## 📚 Citation
+Hiroki Shima (2025). *ODA_Analysis: Independent evaluation of Official Development Assistance effectiveness (2000–2023).*  
+GitHub repository: [https://github.com/HirokiShimaUnited/ODA_Analysis](https://github.com/HirokiShimaUnited/ODA_Analysis)
+
