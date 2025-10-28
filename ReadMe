@@ -3,6 +3,7 @@
 Independent analysis of **Official Development Assistance (ODA)** effectiveness (2000–2023).  
 This project explores how **education** and **health** aid relate to **literacy**, **life expectancy**, and **infant mortality**,  
 highlighting cross-sector connections in human development and social investment outcomes.  
+The findings aim to inform evidence-based policy design and sustainable development strategy.  
 
 ---
 
@@ -56,50 +57,39 @@ for selected developing countries from **2000 to 2023**.
 4. `quarto render reports/ODA_Analysis.qmd` – Render final report (PDF/HTML)
 
 **Directory Structure**
+```bash
 data/
-├─ raw/
-└─ processed/
+ ├─ raw/
+ └─ processed/
 code/
-├─ 00_setup.R
-├─ 01_clean_merge.R
-└─ 02_model_plots.R
+ ├─ 00_setup.R
+ ├─ 01_clean_merge.R
+ └─ 02_model_plots.R
 reports/
-├─ ODA_Analysis.qmd
-├─ ODA_Analysis.pdf
-└─ figures/
+ ├─ ODA_Analysis.qmd
+ ├─ ODA_Analysis.pdf
+ └─ figures/
 
+📈 Key Findings
+Education ODA shows a positive correlation with literacy rate (Pearson r ≈ +0.65).
+Health ODA is moderately linked to life expectancy (r ≈ +0.58).
+Combined education–health models explain development variance better than single-sector models.
+Several middle-income countries show a mismatch between high ODA inflows and slower outcome growth.
 
----
+📂 Data Sources (Summary)
+OECD DAC2A (2000–2023): Education & Health ODA
+World Bank WDI: Literacy, Life Expectancy, Infant Mortality, School Enrollment
 
-## 📈 Key Findings
-- **Education ODA** shows a positive correlation with **literacy rate** (Pearson r ≈ +0.65).  
-- **Health ODA** is moderately linked to **life expectancy** (r ≈ +0.58).  
-- Combined education–health models explain development variance better than single-sector models.  
-- Several middle-income countries show a mismatch between high ODA inflows and slower outcome growth.
+🔁 Reproducibility
+All analyses can be reproduced using R 4.3+ and the tidyverse suite.
+Data sources are open and publicly available for transparency.
+Results are fully replicable using included R scripts and Quarto reports.
 
----
+👤 Author
+H.S (Hiroki Shima)
+Independent Researcher | Human Capital & Development Analytics
+GitHub: HirokiShimaUnited
 
-## 📂 Data Sources (Summary)
-- OECD DAC2A (2000–2023): Education & Health ODA  
-- World Bank WDI: Literacy, Life Expectancy, Infant Mortality, School Enrollment  
-
----
-
-## 🔁 Reproducibility
-All analyses can be reproduced using **R 4.3+** and the **tidyverse** suite.  
-Data sources are open and publicly available for transparency.  
-Results are fully replicable using included **R scripts** and **Quarto reports**.
-
----
-
-## 👤 Author
-**H.S (Hiroki Shima)**  
-Independent Researcher | Human Capital & Development Analytics  
-[GitHub: HirokiShimaUnited](https://github.com/HirokiShimaUnited)
-
----
-
-## 📚 Citation
-Hiroki Shima (2025). *ODA_Analysis: Independent evaluation of Official Development Assistance effectiveness (2000–2023).*  
-GitHub repository: [https://github.com/HirokiShimaUnited/ODA_Analysis](https://github.com/HirokiShimaUnited/ODA_Analysis)
-
+📚 Citation
+Hiroki Shima (2025). ODA_Analysis: Independent evaluation of Official Development Assistance effectiveness (2000–2023).
+GitHub repository: https://github.com/HirokiShimaUnited/ODA_Analysis
